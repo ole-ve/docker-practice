@@ -1,0 +1,19 @@
+services:
+  # The frontend can use this name in the URL to call the backend ("http://backend:3001")
+  # See backend/src/main/java/io/dpschool/frontend/FrontendApplication.java#backend()
+  backend:
+    build:
+      dockerfile: ./Dockerfile
+      context: backend
+    ports:
+      - "3001:3001"
+
+  frontend:
+    build:
+      dockerfile: ./Dockerfile
+      context: frontend
+    ports:
+      - "3000:3000"
+    # The frontend will only start if the backend starts successfully.
+    depends_on:
+      - backend
