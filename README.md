@@ -5,7 +5,7 @@ This guide is a starting point for getting to know the basics of docker.
 ## Project Structure
 
 The application consists of a backend and frontend application.
-For both applications, there is a Dockerfile with which you can build the Docker image for the frontend and backend, respectively.
+For both applications, there is a Dockerfile with which you can build the Docker image for the [frontend](./frontend/Dockerfile) and [backend](./backend/Dockerfile), respectively.
 
 ## 1. Build the backend Docker image
 
